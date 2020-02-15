@@ -16,13 +16,25 @@ Temas que quedan fuera del alcance deseado:
   4- vectores
 */
 function verificarPalindromo () 
-{
+{	
+	var palabra = document.getElementById("palabra").value;
+	var palabraSinEspacios = palabra.replace(/ /g, '');
+	var palabraArray = palabraSinEspacios.split("");
+	palabraArray.reverse();
+	var palabraInvertida = palabraArray.join(" ").replace(/ /g, '');
+
+	if(palabra != ''){
+		if(palabraInvertida == palabraSinEspacios){
+			alert("es palindromo");
+		}else{
+			alert("mmm, no");
+		}
+	}
+	/*   					//El ejercicio por alguna razon vino resuelto, se resolvio arriba con menos codigo.
 	var palabraIngresada;
 	var palabraSinEspacios;
 	var palabraInvertida;
 	var i;
-
-
 
 	palabraIngresada=palabra.value;
 	//console.log(palabra.legth);
@@ -56,8 +68,7 @@ function verificarPalindromo ()
 	}
 	console.log("ingresada: "+palabraIngresada);
 	console.log("sin espacios: "+palabraSinEspacios);
-	console.log("cadena invertida:"+palabraInvertida);
-
+	console.log("cadena invertida:"+palabraInvertida);*/
 }
 
 /* 
